@@ -1,6 +1,6 @@
 module.exports = {
   env: {
-    mocha: true
+    mocha: true,
   },
   globals: {
     StellarSdk: true,
@@ -8,9 +8,8 @@ module.exports = {
     chai: true,
     sinon: true,
     expect: true,
-    HorizonAxiosClient: true
   },
   rules: {
-    'no-unused-vars': 0
-  }
+    "no-unused-vars": 0,
+  },
 };

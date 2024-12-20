@@ -1,10 +1,10 @@
 /* eslint-disable no-undef */
 
-require("babel-register");
-global.StellarSdk = require("../lib/");
+require("@babel/register");
+global.StellarSdk = require("../lib");
 
 global.axios = require("axios");
-global.HorizonAxiosClient = StellarSdk.HorizonAxiosClient;
+global.serverUrl = "https://horizon-live.stellar.org:1337/api/v1/jsonrpc";
 
 var chaiAsPromised = require("chai-as-promised");
 var chaiHttp = require("chai-http");

@@ -1,5 +1,4 @@
-const SERVER_TIME_MAP = StellarSdk.SERVER_TIME_MAP;
-const getCurrentServerTime = StellarSdk.getCurrentServerTime;
+const { SERVER_TIME_MAP, getCurrentServerTime } = StellarSdk.Horizon;
 
 describe("getCurrentServerTime", () => {
   let clock;
@@ -13,7 +12,7 @@ describe("getCurrentServerTime", () => {
     clock.restore();
   });
 
-  it("returns null when the hostname hasnt been hit", () => {
+  it("returns null when the hostname hasn't been hit", () => {
     expect(getCurrentServerTime("host")).to.be.null;
   });
 

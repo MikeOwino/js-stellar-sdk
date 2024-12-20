@@ -1,7 +1,9 @@
 /* tslint:disable:no-var-requires */
+/* eslint import/no-import-module-exports: 0 */
+import { httpClient } from "./http-client";
 
-module.exports = require("./index");
-module.exports.axios = require("axios");
-module.exports.StellarBase = require("stellar-base");
+export * from "./index";
+export * as StellarBase from "@stellar/stellar-base";
+export { httpClient };
 
-export {};
+export default module.exports;
